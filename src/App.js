@@ -1,8 +1,17 @@
+import Navbar from './Components/NavBar';
+import ItemListConatainer from './Components/ItemListContainer'
+
+
 export default function App() {
+
+  const gretens = 'Desafio clase 2'
+
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <>
+      <Navbar />
+      <ItemListConatainer gretens={gretens} />    
+    </>
+    
   )
 }
 

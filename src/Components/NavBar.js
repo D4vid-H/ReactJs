@@ -18,9 +18,9 @@ import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { MenuIcon, SearchIcon, ShoppingBagIcon, XIcon } from '@heroicons/react/outline'
 import CartWidget from './CartWidget'
-import marca2 from '../img/marca2.webp'
+import LogoNavBar from './LogoNavBar'
 
-const navigation = {
+/* const navigation = {
   categories: [
     {
       id: 'women',
@@ -80,7 +80,7 @@ const navigation = {
         },
       ],
     },
-    /* {
+    {
       id: 'men',
       name: 'Men',
       featured: [
@@ -135,17 +135,17 @@ const navigation = {
           ],
         },
       ],
-    }, */
+    },
   ],
   pages: [
     { name: 'Company', href: '#' },
     { name: 'Stores', href: '#' },
   ],
-}
+} */
 
-function classNames(...classes) {
+/* function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
-}
+} */
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -277,11 +277,11 @@ export default function Navbar() {
               <div className="border-t border-gray-200 py-6 px-4">
                 <a href="#" className="-m-2 p-2 flex items-center">
                   <img
-                    src="https://tailwindui.com/img/flags/flag-canada.svg"
+                    src="https://purecatamphetamine.github.io/country-flag-icons/3x2/AR.svg"
                     alt=""
                     className="w-5 h-auto block flex-shrink-0"
                   />
-                  <span className="ml-3 block text-base font-medium text-gray-900">CAD</span>
+                  <span className="ml-3 block text-base font-medium text-gray-900">AR</span>
                   <span className="sr-only">, change currency</span>
                 </a>
               </div>
@@ -311,12 +311,7 @@ export default function Navbar() {
               <div className="ml-4 flex lg:ml-0">
                 <a href="#">
                   <span className="sr-only">Workflow</span>
-                  <img
-                    className="h-10 w-auto"
-                    src={marca2}
-                    alt="logo de Masala"
-                    pointer="none"
-                  />
+                  <LogoNavBar />
                 </a>
               </div>
 

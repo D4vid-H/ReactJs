@@ -1,5 +1,5 @@
 import changuito from '../img/changuito.png'
-import '../Css/CartWidget.css'
+import './CartWidget.css'
 
 function CartWidget(){
 
