@@ -20,31 +20,44 @@ import { MenuIcon, SearchIcon, ShoppingBagIcon, XIcon } from '@heroicons/react/o
 import CartWidget from './CartWidget'
 import LogoNavBar from './LogoNavBar'
 
-/* const navigation = {
+const productImg = require.context('../img');
+
+ const navigation = {
   categories: [
     {
-      id: 'women',
-      name: 'Women',
+      id: 'Tienda',
+      name: 'Tienda',
       featured: [
         {
-          name: 'New Arrivals',
+          name: 'Shampoo solido ecologico',
           href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg',
-          imageAlt: 'Models sitting back to back, wearing Basic Tee in black and bone.',
+          imageSrc: './promo1-1.webp',
+          imageAlt: 'Oferta.',
         },
         {
-          name: 'Basic Tees',
+          name: 'Jabon solido ecologico',
           href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg',
-          imageAlt: 'Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.',
+          imageSrc: './promo2-1.webp',
+          imageAlt: 'Oferta.',
         },
       ],
       sections: [
         {
-          id: 'clothing',
-          name: 'Clothing',
+          id: 'Categorias',
+          name: 'Categorias',
           items: [
-            { name: 'Tops', href: '#' },
+            { id: "1", name: "Cereales", href: '#' },
+            { id: "2", name: "Especias", href: '#' },
+            { id: "3", name: "Frutas Desecadas", href: '#' },
+            { id: "4", name: "Frutos Secos", href: '#' },
+            { id: "5", name: "Harinas", href: '#' },
+            { id: "6", name: "Herboris.", href: '#' },
+            { id: "7", name: "Legumbres", href: '#' },
+            { id: "8", name: "Organicos", href: '#' },
+            { id: "9", name: "Regionales", href: '#' },
+            { id: "10", name: "Semillas", href: '#' },
+            { id: "11", name: "Vinos", href: '#'},
+            /* { name: 'Tops', href: '#' },
             { name: 'Dresses', href: '#' },
             { name: 'Pants', href: '#' },
             { name: 'Denim', href: '#' },
@@ -52,100 +65,21 @@ import LogoNavBar from './LogoNavBar'
             { name: 'T-Shirts', href: '#' },
             { name: 'Jackets', href: '#' },
             { name: 'Activewear', href: '#' },
-            { name: 'Browse All', href: '#' },
-          ],
-        },
-        {
-          id: 'accessories',
-          name: 'Accessories',
-          items: [
-            { name: 'Watches', href: '#' },
-            { name: 'Wallets', href: '#' },
-            { name: 'Bags', href: '#' },
-            { name: 'Sunglasses', href: '#' },
-            { name: 'Hats', href: '#' },
-            { name: 'Belts', href: '#' },
-          ],
-        },
-        {
-          id: 'brands',
-          name: 'Brands',
-          items: [
-            { name: 'Full Nelson', href: '#' },
-            { name: 'My Way', href: '#' },
-            { name: 'Re-Arranged', href: '#' },
-            { name: 'Counterfeit', href: '#' },
-            { name: 'Significant Other', href: '#' },
-          ],
-        },
-      ],
-    },
-    {
-      id: 'men',
-      name: 'Men',
-      featured: [
-        {
-          name: 'New Arrivals',
-          href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg',
-          imageAlt: 'Drawstring top with elastic loop closure and textured interior padding.',
-        },
-        {
-          name: 'Artwork Tees',
-          href: '#',
-          imageSrc: 'https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg',
-          imageAlt:
-            'Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.',
-        },
-      ],
-      sections: [
-        {
-          id: 'clothing',
-          name: 'Clothing',
-          items: [
-            { name: 'Tops', href: '#' },
-            { name: 'Pants', href: '#' },
-            { name: 'Sweaters', href: '#' },
-            { name: 'T-Shirts', href: '#' },
-            { name: 'Jackets', href: '#' },
-            { name: 'Activewear', href: '#' },
-            { name: 'Browse All', href: '#' },
-          ],
-        },
-        {
-          id: 'accessories',
-          name: 'Accessories',
-          items: [
-            { name: 'Watches', href: '#' },
-            { name: 'Wallets', href: '#' },
-            { name: 'Bags', href: '#' },
-            { name: 'Sunglasses', href: '#' },
-            { name: 'Hats', href: '#' },
-            { name: 'Belts', href: '#' },
-          ],
-        },
-        {
-          id: 'brands',
-          name: 'Brands',
-          items: [
-            { name: 'Re-Arranged', href: '#' },
-            { name: 'Counterfeit', href: '#' },
-            { name: 'Full Nelson', href: '#' },
-            { name: 'My Way', href: '#' },
+            { name: 'Browse All', href: '#' }, */
           ],
         },
       ],
     },
   ],
   pages: [
-    { name: 'Company', href: '#' },
-    { name: 'Stores', href: '#' },
+    { name: '¡Quienes somos!', href: '#' },
+    { name: 'Contactanos', href: '#' },
   ],
-} */
+} 
 
-/* function classNames(...classes) {
+function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
-} */
+}
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
@@ -188,8 +122,8 @@ export default function Navbar() {
                 </button>
               </div>
 
-              {/* Links */}
-              {/* <Tab.Group as="div" className="mt-2">
+              {/* Links - mostrar en respondive  */}
+              {<Tab.Group as="div" className="mt-2">
                 <div className="border-b border-gray-200">
                   <Tab.List className="-mb-px flex px-4 space-x-8">
                     {navigation.categories.map((category) => (
@@ -214,7 +148,9 @@ export default function Navbar() {
                         {category.featured.map((item) => (
                           <div key={item.name} className="group relative text-sm">
                             <div className="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75">
-                              <img src={item.imageSrc} alt={item.imageAlt} className="object-center object-cover" />
+                              <img 
+                              src={ productImg(item.imageSrc) } 
+                              alt={item.imageAlt} className="object-center object-cover" />
                             </div>
                             <a href={item.href} className="mt-6 block font-medium text-gray-900">
                               <span className="absolute z-10 inset-0" aria-hidden="true" />
@@ -249,9 +185,10 @@ export default function Navbar() {
                     </Tab.Panel>
                   ))}
                 </Tab.Panels>
-              </Tab.Group> */}
+              </Tab.Group>}
 
-              {/* <div className="border-t border-gray-200 py-6 px-4 space-y-6">
+                {/* mostrar paginas COMPANY Y STORE en respondive */}
+              {<div className="border-t border-gray-200 py-6 px-4 space-y-6">
                 {navigation.pages.map((page) => (
                   <div key={page.name} className="flow-root">
                     <a href={page.href} className="-m-2 p-2 block font-medium text-gray-900">
@@ -259,17 +196,17 @@ export default function Navbar() {
                     </a>
                   </div>
                 ))}
-              </div> */}
+              </div>}
 
               <div className="border-t border-gray-200 py-6 px-4 space-y-6">
                 <div className="flow-root">
                   <a href="#" className="-m-2 p-2 block font-medium text-gray-900">
-                    Sign in
+                    Ingreso
                   </a>
                 </div>
                 <div className="flow-root">
                   <a href="#" className="-m-2 p-2 block font-medium text-gray-900">
-                    Create account
+                    Crear cuenta
                   </a>
                 </div>
               </div>
@@ -316,7 +253,7 @@ export default function Navbar() {
               </div>
 
               {/* Flyout menus */}
-              {/*<Popover.Group className="hidden lg:ml-8 lg:block lg:self-stretch">
+              {<Popover.Group className="hidden lg:ml-8 lg:block lg:self-stretch">
                 <div className="h-full flex space-x-8">
                   {navigation.categories.map((category) => (
                     <Popover key={category.name} className="flex">
@@ -356,7 +293,7 @@ export default function Navbar() {
                                         <div key={item.name} className="group relative text-base sm:text-sm">
                                           <div className="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75">
                                             <img
-                                              src={item.imageSrc}
+                                              src={ productImg(item.imageSrc) }
                                               alt={item.imageAlt}
                                               className="object-center object-cover"
                                             />
@@ -413,16 +350,16 @@ export default function Navbar() {
                     </a>
                   ))}
                 </div>
-              </Popover.Group>*/}
+              </Popover.Group>}
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
-                    Sign in
+                    Ingreso
                   </a>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
                   <a href="#" className="text-sm font-medium text-gray-700 hover:text-gray-800">
-                    Create account
+                    Crear cuenta
                   </a>
                 </div>
 
