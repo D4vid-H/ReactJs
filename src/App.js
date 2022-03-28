@@ -1,6 +1,6 @@
 import Navbar from './Components/NavBar';
 import ItemListConatainer from './Components/ItemListContainer'
-
+import ItemCount from './Components/ItemCount'
 
 export default function App() {
 
@@ -9,6 +9,7 @@ export default function App() {
   return (
     <>
       <Navbar />
+      <ItemCount stock= {9} inicio= {1}/>
       <ItemListConatainer gretens={gretens} />    
     </>
     

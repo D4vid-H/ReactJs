@@ -16,9 +16,10 @@
 */
 import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
-import { MenuIcon, SearchIcon, ShoppingBagIcon, XIcon } from '@heroicons/react/outline'
+import { MenuIcon, SearchIcon, XIcon } from '@heroicons/react/outline'
 import CartWidget from './CartWidget'
 import LogoNavBar from './LogoNavBar'
+
 
 const productImg = require.context('../img');
 
@@ -57,15 +58,6 @@ const productImg = require.context('../img');
             { id: "9", name: "Regionales", href: '#' },
             { id: "10", name: "Semillas", href: '#' },
             { id: "11", name: "Vinos", href: '#'},
-            /* { name: 'Tops', href: '#' },
-            { name: 'Dresses', href: '#' },
-            { name: 'Pants', href: '#' },
-            { name: 'Denim', href: '#' },
-            { name: 'Sweaters', href: '#' },
-            { name: 'T-Shirts', href: '#' },
-            { name: 'Jackets', href: '#' },
-            { name: 'Activewear', href: '#' },
-            { name: 'Browse All', href: '#' }, */
           ],
         },
       ],
@@ -122,7 +114,7 @@ export default function Navbar() {
                 </button>
               </div>
 
-              {/* Links - mostrar en respondive  */}
+              {/* Links - mostrar en responsive  */}
               {<Tab.Group as="div" className="mt-2">
                 <div className="border-b border-gray-200">
                   <Tab.List className="-mb-px flex px-4 space-x-8">
@@ -144,6 +136,7 @@ export default function Navbar() {
                 <Tab.Panels as={Fragment}>
                   {navigation.categories.map((category) => (
                     <Tab.Panel key={category.name} className="pt-10 pb-8 px-4 space-y-10">
+                      {/* Card Oferta responsive */}
                       {<div className="grid grid-cols-2 gap-x-4">
                         {category.featured.map((item) => (
                           <div key={item.name} className="group relative text-sm">
@@ -162,6 +155,7 @@ export default function Navbar() {
                           </div>
                         ))}
                       </div>}
+                      {/* Lista de links responsive */}
                       {category.sections.map((section) => (
                         <div key={section.name}>
                           <p id={`${category.id}-${section.id}-heading-mobile`} className="font-medium text-gray-900">
@@ -187,7 +181,7 @@ export default function Navbar() {
                 </Tab.Panels>
               </Tab.Group>}
 
-                {/* mostrar paginas COMPANY Y STORE en respondive */}
+                {/* mostrar paginas ¡Quienes somos! Y Contacto en responsive */}
               {<div className="border-t border-gray-200 py-6 px-4 space-y-6">
                 {navigation.pages.map((page) => (
                   <div key={page.name} className="flow-root">
@@ -232,6 +226,7 @@ export default function Navbar() {
           Get free delivery on orders over $100
         </p>
 
+        {/* Web menu */}
         <nav aria-label="Top" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-b border-gray-200">
             <div className="h-16 flex items-center">
@@ -252,7 +247,7 @@ export default function Navbar() {
                 </a>
               </div>
 
-              {/* Flyout menus */}
+              {/* Flyout full menus */}
               {<Popover.Group className="hidden lg:ml-8 lg:block lg:self-stretch">
                 <div className="h-full flex space-x-8">
                   {navigation.categories.map((category) => (

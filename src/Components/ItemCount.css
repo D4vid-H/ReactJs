@@ -1,0 +1,54 @@
+.btnContain{
+width: 200px;
+height: 55px;
+display: flex;
+flex-direction: column;
+border-radius: 5%;
+border: 1px solid black;
+box-sizing: content-box;
+background-color: blue;
+justify-content: space-evenly;
+justify-items: center;
+align-items: center;
+margin-left: 2rem;
+}
+.btnCountContain{
+display: flex;
+opacity: 0.78;
+color: beige;
+width: 185px;
+justify-content: space-evenly;
+}
+.btnCount{
+display: flex;
+width: 25px;
+height: 25px;
+background-color: crimson;
+color: black;
+border-radius: 50%;
+font-size: 1.55rem;
+justify-content: center;
+align-items: center;
+padding-bottom: 5px;
+}
+.counter{
+display: flex;
+justify-content: center;
+margin: 0px 5px 0px 5px;
+}
+.btnOnAdd {
+display: flex;
+height: 20px;
+border-radius: 4%;
+background-color: azure;
+color: black;
+justify-content: center;
+align-items: center;
+box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.6);
+}
+.btnOnAdd:active{
+background-color: rgb(109, 186, 248);
+color: black;
+border-radius: 4%;
+transform: scale(0.95);
+}
