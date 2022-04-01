@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.cardContainer{
+display: flex;
+flex-direction: column;
+width: 220px;
+height: 360px;
+border: 2px solid blue;
+border-radius: 5%;
+box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+justify-content: space-between;
+align-items: center;
+background-color: cadetblue;
+}
+
+.cardHead{
+display: flex;
+width: auto;
+height: auto;
+background-color: grey;
+border: 1px solid whitesmoke;
+border-top-right-radius: 10%;
+border-top-left-radius: 10%;
+justify-content: center;
+}
+
+.cardHead span{
+color: white;
+font-size: 400;
+font-family: Georgia, 'Times New Roman', Times, serif;
+text-align: center;
+text-transform: uppercase;
+}
+
+.cardImage{
+width: 160px;
+height: auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+box-sizing: content-box;
+background-color: rgba(0, 0, 0, 0.459);
+
+}
+
+.cardInfo{
+    color: rgba(245, 183, 183, 0.652);
+}
+.cardImg{
+padding: 2px;
+}
+
+.cardFooter{
+width: auto;
+height: auto;
+background-color: grey;
+box-sizing: content-box;
+border: 1px solid whitesmoke;
+}
+    
+.cardFooter span{
+color: white;
+font-size: 400;
+font-family: Georgia, 'Times New Roman', Times, serif;
+text-align: center;
+text-transform: uppercase;
+}
+
+.cardBtnContent{
+    display: flex;
+}
+
+.cardBtn{
+background-color: grey;
+color: white;
+border: 1px solid teal;
+}
+
+.cardBtn:active{
+background-color: darkgrey;
+color: black;
+transform: scale(0.9);
+}
