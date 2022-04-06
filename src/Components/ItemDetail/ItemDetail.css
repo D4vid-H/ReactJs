@@ -55,4 +55,12 @@
   grid-column: 2 / span 2;
   background-color: black;
   color: white;
+  border-radius: 15px;
+  position: absolute;
+  margin-left: 390px;
+  margin-top: 230px;
+  width: 105px;
+  height: 45px;
+  text-align: center;
+  padding-top: 10px;
 }
