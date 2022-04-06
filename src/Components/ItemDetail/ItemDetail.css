@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.cardDetailContainer{
+  width: 40rem;
+  height: 50rem;
+  margin-left: 10rem;
+}
+
+.grillaDetail {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 20rem 10rem;
+  gap: 5px;
+  align-items: center;
+  justify-items: center;
+  background-color: darkcyan;
+}
+.imgContainer {
+  grid-row: 1 / span 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  /* box-shadow: -11px 11px 1px rgba(0, 0, 0, 0.3); */
+}
+.imgContainer img{
+  border-radius: 10px;
+  width: 25rem;
+  height: 25rem;
+  object-fit: cover;
+}
+.infoContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: center;
+}
+.infoContainer h1{  
+  text-decoration: underline;
+  text-transform: uppercase;  
+  font-size: larger;
+  font-weight: 600;  
+}
+.infoContainer p{
+  color: black;
+  text-align: justify; 
+}
+.priceContainer {
+  grid-column: 2 / span 2;
+  background-color: black;
+  color: white;
+}

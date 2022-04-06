@@ -1,0 +1,14 @@
+.itemList {
+  display: flex;
+  flex-direction: column;
+  background-color: gainsboro;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemListContent {
+  color: teal;
+  font-size: 4rem;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}

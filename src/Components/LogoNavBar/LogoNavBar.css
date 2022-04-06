@@ -1,0 +1,10 @@
+.logoNavBarContain {
+  display: flex;
+  width: 65px;
+  height: 65px;
+  box-sizing: border-box;
+}
+
+.logoNavBar {
+  object-fit: contain;
+}

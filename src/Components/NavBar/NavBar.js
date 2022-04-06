@@ -17,11 +17,11 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { MenuIcon, SearchIcon, XIcon } from '@heroicons/react/outline'
-import CartWidget from './CartWidget'
-import LogoNavBar from './LogoNavBar'
+import CartWidget from '../CartWidget/CartWidget'
+import LogoNavBar from '../LogoNavBar/LogoNavBar'
 
 
-const productImg = require.context('../img');
+const productImg = require.context('../../img');
 
  const navigation = {
   categories: [
