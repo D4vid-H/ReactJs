@@ -1,23 +1,23 @@
 import Navbar from "./Components/NavBar/NavBar";
 import ItemListConatainer from "./Components/ItemListContainer/ItemListContainer";
-import ItemCount from "./Components/ItemCount/ItemCount";
 import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 export default function App() {
-  const gretens = "Desafio clase 2";
-
-  const agregarProd = (stock, count) => {
-    stock - count >= 0 &&
-      count !== 0 &&
-      console.log(`Se agregaron ${count} productos`);
-  };
+  const gretens = "Listado de Productos";
 
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      <ItemCount stock={9} inicio={1} onAdd={agregarProd} />
-      <ItemListConatainer gretens={gretens} />
-      <ItemDetailContainer />
-    </>
+      <Routes>
+        <Route path="/" element={<ItemListConatainer gretens={gretens} />} />
+        <Route
+          path="/categoria/:categoriaId"
+          element={<ItemListConatainer gretens={gretens} />}
+        />
+        <Route path="/detail/:id" element={<ItemDetailContainer />} />
+        <Route path="*" element={<h1>Not Found 404</h1>} />
+      </Routes>
+    </BrowserRouter>
   );
 }

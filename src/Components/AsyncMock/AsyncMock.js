@@ -20,7 +20,7 @@ const products = [
   {
     nombre: "Almohada Frutilla",
     id: "13",
-    categoria: "1",
+    categoria: "2",
     descripcion:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
     precio: 74,
@@ -29,7 +29,7 @@ const products = [
   {
     nombre: "Anillo Frutas",
     id: "14",
-    categoria: "1",
+    categoria: "3",
     descripcion:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
     precio: 23,
@@ -64,20 +64,22 @@ const products = [
   },
 ];
 
-export const getItem = () => {
+export const getProducts = (categoryId) => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(products[0]);
+      resolve(
+        categoryId
+          ? products.filter((items) => items.categoria === categoryId)
+          : products
+      );
     }, 2000);
   });
 };
 
-
-export const getProducts = () => {
+export const getItem = (id) => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(products);
+      resolve(products.find((item) => item.id === id));
     }, 2000);
   });
 };
-

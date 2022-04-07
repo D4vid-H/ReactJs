@@ -3,7 +3,7 @@
   padding: 0;
 }
 
-.cardDetailContainer{
+.cardDetailContainer {
   width: 40rem;
   height: 50rem;
   margin-left: 10rem;
@@ -24,10 +24,10 @@
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;  
+  justify-content: center;
   /* box-shadow: -11px 11px 1px rgba(0, 0, 0, 0.3); */
 }
-.imgContainer img{
+.imgContainer img {
   border-radius: 10px;
   width: 25rem;
   height: 25rem;
@@ -41,15 +41,15 @@
   align-content: space-around;
   justify-content: center;
 }
-.infoContainer h1{  
+.infoContainer h1 {
   text-decoration: underline;
-  text-transform: uppercase;  
+  text-transform: uppercase;
   font-size: larger;
-  font-weight: 600;  
+  font-weight: 600;
 }
-.infoContainer p{
+.infoContainer p {
   color: black;
-  text-align: justify; 
+  text-align: justify;
 }
 .priceContainer {
   grid-column: 2 / span 2;
