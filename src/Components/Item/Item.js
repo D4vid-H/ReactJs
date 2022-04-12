@@ -3,7 +3,7 @@ import "./Item.css";
 
 const productImg = require.context("../../img");
 
-function Item({ id, nombre, precio, picturUrl }) {
+function Item({ id, nombre, precio, picturUrl, categoriName }) {
   return (
     <div className="cardContainer">
       <div className="cardHead">
@@ -25,6 +25,7 @@ function Item({ id, nombre, precio, picturUrl }) {
         </Link>
       </div>
       <div className="cardFooter">
+      <span className="cardTitel">{categoriName}</span>
         <span className="cardStock product-price">
           Precio:<b>$</b>
           <b>{precio}</b>

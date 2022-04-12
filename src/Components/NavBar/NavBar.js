@@ -28,36 +28,23 @@ const navigation = {
     {
       id: "Tienda",
       name: "Tienda",
-      /* featured: [
-        {
-          name: 'Shampoo solido ecologico',
-          href: '#',
-          imageSrc: './promo1-1.webp',
-          imageAlt: 'Oferta.',
-        },
-        {
-          name: 'Jabon solido ecologico',
-          href: '#',
-          imageSrc: './promo2-1.webp',
-          imageAlt: 'Oferta.',
-        },
-      ], */
       sections: [
         {
           id: "Categorias",
           name: "Categorias",
           items: [
-            { id: "1", name: "Cereales", href: "#" },
-            { id: "2", name: "Especias", href: "#" },
-            { id: "3", name: "Frutas Desecadas", href: "#" },
-            { id: "4", name: "Frutos Secos", href: "#" },
-            { id: "5", name: "Harinas", href: "#" },
-            { id: "6", name: "Herboris.", href: "#" },
-            { id: "7", name: "Legumbres", href: "#" },
-            { id: "8", name: "Organicos", href: "#" },
-            { id: "9", name: "Regionales", href: "#" },
-            { id: "10", name: "Semillas", href: "#" },
-            { id: "11", name: "Vinos", href: "#" },
+            { id: "0", name: "Todo"},
+            { id: "1", name: "Cereales"},
+            { id: "2", name: "Especias"},
+            { id: "3", name: "Frutas Desecadas"},
+            { id: "4", name: "Frutos Secos"},
+            { id: "5", name: "Harinas"},
+            { id: "6", name: "Herboris."},
+            { id: "7", name: "Legumbres"},
+            { id: "8", name: "Organicos"},
+            { id: "9", name: "Regionales"},
+            { id: "10", name: "Semillas"},
+            { id: "11", name: "Vinos"},
           ],
         },
       ],

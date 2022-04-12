@@ -15,6 +15,7 @@ export default function App() {
           path="/categoria/:categoriaId"
           element={<ItemListConatainer gretens={gretens} />}
         />
+        <Route path="/categoria/0" element={<ItemListConatainer gretens={gretens} />} />
         <Route path="/detail/:id" element={<ItemDetailContainer />} />
         <Route path="*" element={<h1>Not Found 404</h1>} />
       </Routes>

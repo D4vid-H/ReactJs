@@ -3,7 +3,7 @@ import "./ItemDetail.css";
 
 const productImg = require.context("../../img");
 
-function ItemDetail({ nombre, picturUrl, descripcion, precio }) {
+function ItemDetail({ nombre, picturUrl, informacion, categoriName, descripcion, precio }) {
   const agregarProd = (stock, count) => {
     stock - count >= 0 &&
       count !== 0 &&
@@ -23,12 +23,14 @@ function ItemDetail({ nombre, picturUrl, descripcion, precio }) {
 
         <div className="infoContainer">
           <h1>{nombre}</h1>
-          <p>Descripcion {descripcion}</p>
+            <span>Categoria: {categoriName}</span>
+          <p>Descripcion: {descripcion}</p>
+          <p>Mas informacion: {informacion}</p>
         </div>
         <div className="priceContainer">
           <span>Precio: $ {precio} </span>
-        </div>
-        <ItemCount stock={9} inicio={1} onAdd={agregarProd} />
+        </div>               
+        <ItemCount stock={9} inicio={1} onAdd={agregarProd} />        
       </div>
     </div>
   );
