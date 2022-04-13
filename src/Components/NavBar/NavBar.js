@@ -20,8 +20,11 @@ import { MenuIcon, SearchIcon, XIcon } from "@heroicons/react/outline";
 import CartWidget from "../CartWidget/CartWidget";
 import LogoNavBar from "../LogoNavBar/LogoNavBar";
 import { Link } from "react-router-dom";
+import Select from "../SelectOptions/Select";
 
 const productImg = require.context("../../img");
+
+const flag = [{id: 1, value: 'AR', text: 'AR'}, {id: 2, value: 'ES', text: 'ES'}, {id: 3, value: 'US', text: 'US'}]
 
 const navigation = {
   categories: [
@@ -60,8 +63,14 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [flags, setFlags] = useState('AR');
+
+  const handleFlag = (option) => {
+    setFlags(option);
+  }
 
   return (
     <div className="bg-white">
@@ -168,12 +177,12 @@ export default function Navbar() {
                             >
                               {section.items.map((item) => (
                                 <li key={item.name} className="flow-root">
-                                  <a
-                                    href={item.href}
-                                    className="-m-2 p-2 block text-gray-500"
+                                  <Link
+                                  to={`/categoria/${item.id}`}
+                                  className="hover:text-gray-800"
                                   >
-                                    {item.name}
-                                  </a>
+                                  {item.name}
+                                  </Link>
                                 </li>
                               ))}
                             </ul>
@@ -221,17 +230,14 @@ export default function Navbar() {
               </div>
 
               <div className="border-t border-gray-200 py-6 px-4">
-                <a href="#" className="-m-2 p-2 flex items-center">
-                  <img
-                    src="https://purecatamphetamine.github.io/country-flag-icons/3x2/AR.svg"
-                    alt=""
-                    className="w-5 h-auto block flex-shrink-0"
-                  />
-                  <span className="ml-3 block text-base font-medium text-gray-900">
-                    AR
-                  </span>
-                  <span className="sr-only">, change currency</span>
-                </a>
+                <div href="#" className="-m-2 p-2 flex items-center">
+                    <img
+                      src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${flags}.svg`}
+                      alt=""
+                      className="w-5 h-auto block flex-shrink-0"
+                    />
+                  <Select options={flag} onSelect={handleFlag} />
+                </div>
               </div>
             </div>
           </Transition.Child>
@@ -368,13 +374,12 @@ export default function Navbar() {
                     ))}
 
                     {navigation.pages.map((page) => (
-                      <a
-                        key={page.name}
-                        href={page.href}
-                        className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                      <Link to={`/opcion/${page.name}`}
+                            className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                            key={page.name}
                       >
                         {page.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </Popover.Group>
@@ -398,18 +403,16 @@ export default function Navbar() {
                 </div>
 
                 <div className="hidden lg:ml-8 lg:flex">
-                  <a
-                    href="#"
+                  <div
                     className="text-gray-700 hover:text-gray-800 flex items-center"
-                  >
+                    >
                     <img
-                      src="https://purecatamphetamine.github.io/country-flag-icons/3x2/AR.svg"
+                      src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${flags}.svg`}
                       alt=""
                       className="w-5 h-auto block flex-shrink-0"
                     />
-                    <span className="ml-3 block text-sm font-medium">AR</span>
-                    <span className="sr-only">, change currency</span>
-                  </a>
+                    <Select options={flag} onSelect={handleFlag} />
+                  </div>
                 </div>
 
                 {/* Search */}
@@ -422,13 +425,13 @@ export default function Navbar() {
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
-                  <a href="#" className="group -m-2 p-2 flex items-center">
-                    <CartWidget />
+                  <div href="#" className="group -m-2 p-2 flex items-center"> 
+                    <Link to='/cart'><CartWidget /></Link>
                     <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
                       0
                     </span>
                     <span className="sr-only">items in cart, view bag</span>
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>
