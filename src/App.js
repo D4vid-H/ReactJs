@@ -4,11 +4,13 @@ import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailCont
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Form from "./Components/Form/Form";
 import Cart from "./Components/Cart/Cart";
+import { CartContextProvaider } from "./Context/CartContext";
 
 export default function App() {
   const gretens = "Listado de Productos";
 
   return (
+    <CartContextProvaider>
     <BrowserRouter>
       <Navbar />
       <Routes>
@@ -19,10 +21,11 @@ export default function App() {
         />
         <Route path="/categoria/0" element={<ItemListConatainer gretens={gretens} />} />
         <Route path="/detail/:id" element={<ItemDetailContainer />} />
-        <Route path="/opcion/Contactanos" element={<Form />} />
+        <Route path="/opcion/contacto" element={<Form />} />
         <Route path="/cart" element={<Cart/>} />
         <Route path="*" element={<h1>Not Found 404</h1>} />
       </Routes>
     </BrowserRouter>
+    </CartContextProvaider>
   );
 }

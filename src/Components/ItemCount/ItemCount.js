@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./ItemCount.css";
 
 function ItemCount({ inicio, stock, onAdd }) {
   const [count, setCount] = useState(inicio);
 
-  const countIncrement = (stock) => {
+  const countIncrement = () => {
     count < stock && setCount(count + 1);
   };
 
@@ -18,9 +19,7 @@ function ItemCount({ inicio, stock, onAdd }) {
         <button
           className="btnCount"
           type=""
-          onClick={() => {
-            countIncrement(stock);
-          }}
+          onClick={countIncrement}
         >
           +
         </button>
@@ -28,21 +27,21 @@ function ItemCount({ inicio, stock, onAdd }) {
         <button
           className="btnCount"
           type=""
-          onClick={() => {
-            countDecrement();
-          }}
+          onClick={ countDecrement }
         >
           -
         </button>
       </div>
-      <button
-        className="btnOnAdd"
+      <Link 
+        to='/cart'
+        className="bg-blue-700 opacity-100 hover:opacity-80 text-gray-100 hover:text-gray-900 rounded-full px-10 py-2 font-semibold"
+        /* className="btnOnAdd" */
         onClick={() => {
           onAdd(stock, count);
         }}
       >
         <p>Agregar al Carrito</p>
-      </button>
+      </Link>
     </div>
   );
 }

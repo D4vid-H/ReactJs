@@ -1,15 +1,11 @@
 .btnContain {
-  width: 180px;
+  width: 215px;
   height: 65px;
   display: flex;
   flex-direction: column;
   box-sizing: content-box;
-  background-color: rgb(84, 178, 178);
   justify-content: space-evenly;
   align-items: center;
-  position: absolute;
-  margin-top: 505px;
-  margin-left: -220px;
 }
 .btnCountContain {
   display: flex;
@@ -17,6 +13,7 @@
   color: beige;
   width: 185px;
   justify-content: space-evenly;
+  margin-bottom: 0.5rem;
 }
 .btnCount {
   display: flex;
@@ -34,6 +31,7 @@
   display: flex;
   justify-content: center;
   margin: 0px 5px 0px 5px;
+  color: black;
 }
 .btnOnAdd {
   display: flex;

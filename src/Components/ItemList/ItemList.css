@@ -1,8 +1,0 @@
-.gridItems {
-  display: grid;
-  grid-template-columns: repeat(3, 18rem);
-  grid-template-rows: repeat(3, 25rem);
-  gap: 20px;
-  align-items: center;
-  justify-items: center;
-}

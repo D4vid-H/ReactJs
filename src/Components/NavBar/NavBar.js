@@ -21,8 +21,11 @@ import CartWidget from "../CartWidget/CartWidget";
 import LogoNavBar from "../LogoNavBar/LogoNavBar";
 import { Link } from "react-router-dom";
 import Select from "../SelectOptions/Select";
+/* import CartContext from "../../Context/CartContext";
+import { useContext } from "react"; */
 
-const productImg = require.context("../../img");
+
+/* const productImg = require.context("../../img"); */
 
 const flag = [{id: 1, value: 'AR', text: 'AR'}, {id: 2, value: 'ES', text: 'ES'}, {id: 3, value: 'US', text: 'US'}]
 
@@ -54,8 +57,8 @@ const navigation = {
     },
   ],
   pages: [
-    { name: "¡Quienes somos!", href: "#" },
-    { name: "Contactanos", href: "#" },
+    { name: "about", title: "!Quienes somos¡" },
+    { name: "contacto", title: "Contactanos" },
   ],
 };
 
@@ -67,6 +70,8 @@ function classNames(...classes) {
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [flags, setFlags] = useState('AR');
+  /* const {getQuantity} = useContext(CartContext) */
+
 
   const handleFlag = (option) => {
     setFlags(option);
@@ -170,11 +175,11 @@ export default function Navbar() {
                             >
                               {section.name}
                             </p>
-                            <ul
+                            {/* <ul
                               role="list"
                               aria-labelledby={`${category.id}-${section.id}-heading-mobile`}
                               className="mt-6 flex flex-col space-y-6"
-                            >
+                            > */}
                               {section.items.map((item) => (
                                 <li key={item.name} className="flow-root">
                                   <Link
@@ -185,7 +190,7 @@ export default function Navbar() {
                                   </Link>
                                 </li>
                               ))}
-                            </ul>
+                            {/* </ul> */}
                           </div>
                         ))}
                       </Tab.Panel>
@@ -198,13 +203,13 @@ export default function Navbar() {
               {
                 <div className="border-t border-gray-200 py-6 px-4 space-y-6">
                   {navigation.pages.map((page) => (
-                    <div key={page.name} className="flow-root">
-                      <a
-                        href={page.href}
-                        className="-m-2 p-2 block font-medium text-gray-900"
+                    <div key={page.name} className="flow-root">                     
+                     <Link to={`/opcion/${page.name}`}
+                            className="-m-2 p-2 block font-medium text-gray-900"
+                            key={page.name}
                       >
-                        {page.name}
-                      </a>
+                        {page.title}
+                      </Link>
                     </div>
                   ))}
                 </div>
@@ -311,27 +316,7 @@ export default function Navbar() {
 
                                 <div className="relative bg-white">
                                   <div className="max-w-md mx-auto p-8">
-                                    <div className="grid grid-cols-1 ">
-                                      {/* {<div className="col-start-2 grid grid-cols-2 gap-x-8">
-                                      {category.featured.map((item) => (
-                                        <div key={item.name} className="group relative text-base sm:text-sm">
-                                          <div className="aspect-w-1 aspect-h-1 rounded-lg bg-gray-100 overflow-hidden group-hover:opacity-75">
-                                            <img
-                                              src={ productImg(item.imageSrc) }
-                                              alt={item.imageAlt}
-                                              className="object-center object-cover"
-                                            />
-                                          </div>
-                                          <a href={item.href} className="mt-6 block font-medium text-gray-900">
-                                            <span className="absolute z-10 inset-0" aria-hidden="true" />
-                                            {item.name}
-                                          </a>
-                                          <p aria-hidden="true" className="mt-1">
-                                            Shop now
-                                          </p>
-                                        </div>
-                                      ))}
-                                    </div>} */}
+                                    <div className="grid grid-cols-1 ">                                      
                                       <div className="row-start-1 grid grid-cols-1 text-sm">
                                         {category.sections.map((section) => (
                                           <div key={section.name}>
@@ -353,7 +338,7 @@ export default function Navbar() {
                                                 >
                                                   <Link
                                                     to={`/categoria/${item.id}`}
-                                                    className="hover:text-gray-800"
+                                                    className="hover:text-blue-800"
                                                   >
                                                     {item.name}
                                                   </Link>
@@ -378,7 +363,7 @@ export default function Navbar() {
                             className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
                             key={page.name}
                       >
-                        {page.name}
+                        {page.title}
                       </Link>
                     ))}
                   </div>
@@ -425,12 +410,8 @@ export default function Navbar() {
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
-                  <div href="#" className="group -m-2 p-2 flex items-center"> 
-                    <Link to='/cart'><CartWidget /></Link>
-                    <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
-                      0
-                    </span>
-                    <span className="sr-only">items in cart, view bag</span>
+                  <div className="group -m-2 p-2 items-center "> 
+                    <Link to='/cart' className="grid grid-cols-2 "><CartWidget /></Link>                    
                   </div>
                 </div>
               </div>
