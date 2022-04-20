@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import "./ItemCount.css";
 
 function ItemCount({ inicio, stock, onAdd }) {
@@ -10,7 +9,7 @@ function ItemCount({ inicio, stock, onAdd }) {
   };
 
   const countDecrement = () => {
-    count > 0 && setCount(count - 1);
+    count > 1 && setCount(count - 1);
   };
 
   return (
@@ -19,29 +18,27 @@ function ItemCount({ inicio, stock, onAdd }) {
         <button
           className="btnCount"
           type=""
-          onClick={countIncrement}
+          onClick={countDecrement}
         >
-          +
+          -
         </button>
         <span className="counter">{count}</span>
         <button
           className="btnCount"
           type=""
-          onClick={ countDecrement }
+          onClick={countIncrement}
         >
-          -
+          +
         </button>
       </div>
-      <Link 
-        to='/cart'
+      <button
         className="bg-blue-700 opacity-100 hover:opacity-80 text-gray-100 hover:text-gray-900 rounded-full px-10 py-2 font-semibold"
-        /* className="btnOnAdd" */
         onClick={() => {
           onAdd(stock, count);
         }}
       >
         <p>Agregar al Carrito</p>
-      </Link>
+      </button>
     </div>
   );
 }
