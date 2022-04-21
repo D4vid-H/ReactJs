@@ -8,6 +8,7 @@ const products = [
     informacion: "INGREDIENTES: Relleno sabor avellana, harina de trigo enriquecida según Ley N° 25.630, harina de avena, salvado de trigo, azúcar, harina de maíz, sal, malta torrada i instantánea, COL: INS 150d, antioxidantes (tocoferoles), relleno sabor avellana: azúcar, aceite de palma, sólidos lácteos, cacao en polvo, EMU: INS 322 INS 476, aromatizante/saborizante artificial de avellana.",
     precio: 93,
     picturUrl: "./11.webp",
+    stock: 25,
   },
   {
     nombre: "Almohada Chocolate",
@@ -18,6 +19,7 @@ const products = [
     informacion: "INGREDIENTES: Relleno sabor chocolate (azúcar, aceite vegetal hidrogenado, cacao en polvo, aceite vegetal interesterificado, EMU: lecitina de soja, ANT: INS 476, aromatizantes artificiales, etilvainilla), harina de trigo 000 enriquecida según ley 25630, harina de maíz desgerminada, harina de arroz, azúcar, extracto de malta, leche en polvo, AGREG: bicarbonato de sodio y sal.",
     precio: 95,
     picturUrl: "./12.webp",
+    stock: 25,
   },
   {
     nombre: "Almohada Frutilla",
@@ -28,6 +30,7 @@ const products = [
     informacion: "INGREDIENTES: Relleno sabor frutilla, harina de trigo enriquecida, harina de avena, salvado de trigo, azúcar, harina de maíz, extracto de malta, sal, antioxidante.",
     precio: 94,
     picturUrl: "./13.webp",
+    stock: 25,
   },
   {
     nombre: "Anillo Frutas",
@@ -38,6 +41,7 @@ const products = [
     informacion: "INGREDIENTES: Harina de trigo, azúcar, harina de avena, harina de maíz, jarabe de glucosa, aromatizantes, saborizantes, colorantes y sal.",
     precio: 43,
     picturUrl: "./14.webp",
+    stock: 25,
   },
   {
     nombre: "Arroz Inflado Dulce",
@@ -48,6 +52,7 @@ const products = [
     informacion: "Tambien es la preferida de las personas que buscan alimentarse sanamente sin dejar de darse un gusto de vez en cuando.",
     precio: 35,
     picturUrl: "./15.webp",
+    stock: 25,
   },
   {
     nombre: "Avena Instantanea",
@@ -58,6 +63,7 @@ const products = [
     informacion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
     precio: 74,
     picturUrl: "./16.webp",
+    stock: 25,
   },
   {
     nombre: "Avena Tradicional",
@@ -68,6 +74,7 @@ const products = [
     informacion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
     precio: 63,
     picturUrl: "./17.webp",
+    stock: 25,
   },
   {
     nombre: "Aji Molido",
@@ -77,7 +84,8 @@ const products = [
     descripcion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
     informacion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
     precio: 74,
-    picturUrl: "./21.webp"
+    picturUrl: "./21.webp",
+    stock: 25,
   },
   {
     nombre: "Ajo Negro",
@@ -87,7 +95,8 @@ const products = [
     descripcion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
     informacion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
     precio: 56,
-    picturUrl: "./22.webp"
+    picturUrl: "./22.webp",
+    stock: 25,
   },
   {
     nombre: "Ajo Polvo",
@@ -97,7 +106,8 @@ const products = [
     descripcion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
     informacion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
     precio: 46,
-    picturUrl: "./23.webp"
+    picturUrl: "./23.webp",
+    stock: 25,
   },
   {
     nombre: "Condimento Arroz",
@@ -107,7 +117,8 @@ const products = [
     descripcion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
     informacion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
     precio: 34,
-    picturUrl: "./24.webp"
+    picturUrl: "./24.webp",
+    stock: 25,
   },
   {
     nombre: "Anana Cubitos",
@@ -117,7 +128,8 @@ const products = [
     descripcion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
     informacion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
     precio: 121,
-    picturUrl: "./31.webp"
+    picturUrl: "./31.webp",
+    stock: 25,
   },
   {
     nombre: "Arandano Rojo",
@@ -127,7 +139,8 @@ const products = [
     descripcion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
     informacion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
     precio: 107,
-    picturUrl: "./32.webp"
+    picturUrl: "./32.webp",
+    stock: 25,
   },
   {
     nombre: "Chips Banana",
@@ -137,7 +150,8 @@ const products = [
     descripcion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
     informacion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
     precio: 84,
-    picturUrl: "./33.webp"
+    picturUrl: "./33.webp",
+    stock: 25,
   },
   {
     nombre: "Ciruela",
@@ -147,11 +161,12 @@ const products = [
     descripcion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
     informacion: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
     precio: 114,
-    picturUrl: "./34.webp"
+    picturUrl: "./34.webp",
+    stock: 25,
   },
 ];
 
-export const getProducts = (categoryId) => {
+ export const getProducts = (categoryId) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(
@@ -161,12 +176,13 @@ export const getProducts = (categoryId) => {
       );
     }, 1000);
   });
-};
+}; 
 
-export const getItem = (id) => {
+ export const getItem = (id) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(products.find((item) => item.id === id));
     }, 500);
   });
-};
+}; 
+ 

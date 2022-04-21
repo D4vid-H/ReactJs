@@ -1,14 +1,12 @@
-import {Link} from 'react-router-dom'
-import { useContext } from 'react';
-import CartContext from '../../Context/CartContext';
-import InputCount from '../InputCount/InputCount';
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import CartContext from "../../Context/CartContext";
+import InputCount from "../InputCount/InputCount";
 
 const productImg = require.context("../../img");
 
 function ItemCart({ product }) {
-
-    const { removeItem, addQuantity } = useContext(CartContext);
-  
+  const { removeItem, addQuantity } = useContext(CartContext);
 
   return (
     <>
@@ -28,11 +26,15 @@ function ItemCart({ product }) {
             </h3>
             <p className="ml-4">$ {product.precio}</p>
           </div>
-          <p className="mt-1 text-sm text-gray-500">Cantidad: {product.quantity}</p>
-          <InputCount  product={product} inicio={1} stock={10} onAdd={addQuantity} />
+          <p className="mt-1 text-sm text-gray-500">
+            Cantidad: {product.quantity}
+          </p>
+          <InputCount product={product} inicio={1} onAdd={addQuantity} />
         </div>
         <div className="flex flex-1 items-end justify-between text-sm">
-          <p className="text-gray-500">Sub Total $ {product.quantity * product.precio}</p>
+          <p className="text-gray-500">
+            Sub Total $ {product.quantity * product.precio}
+          </p>
 
           <div className="flex">
             <button

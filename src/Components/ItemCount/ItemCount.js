@@ -15,19 +15,11 @@ function ItemCount({ inicio, stock, onAdd }) {
   return (
     <div className="btnContain">
       <div className="btnCountContain">
-        <button
-          className="btnCount"
-          type=""
-          onClick={countDecrement}
-        >
+        <button className="btnCount" type="" onClick={countDecrement}>
           -
         </button>
         <span className="counter">{count}</span>
-        <button
-          className="btnCount"
-          type=""
-          onClick={countIncrement}
-        >
+        <button className="btnCount" type="" onClick={countIncrement}>
           +
         </button>
       </div>

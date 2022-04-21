@@ -14,7 +14,7 @@
   }
   ```
 */
-import { Fragment, useState } from "react";
+import { Fragment, useState, useContext, useEffect } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
 import { MenuIcon, SearchIcon, XIcon } from "@heroicons/react/outline";
 import CartWidget from "../CartWidget/CartWidget";
@@ -22,58 +22,59 @@ import LogoNavBar from "../LogoNavBar/LogoNavBar";
 import { Link } from "react-router-dom";
 import Select from "../SelectOptions/Select";
 import CartContext from "../../Context/CartContext";
-import { useContext } from "react"; 
+import { firestoreDb } from "../../service/firebase";
+import { getDocs, collection, query, orderBy } from "firebase/firestore";
 
-
-const flag = [{id: 1, value: 'AR', text: 'AR'}, {id: 2, value: 'ES', text: 'ES'}, {id: 3, value: 'US', text: 'US'}]
-
-const navigation = {
-  categories: [
-    {
-      id: "Tienda",
-      name: "Tienda",
-      sections: [
-        {
-          id: "Categorias",
-          name: "Categorias",
-          items: [
-            { id: "0", name: "Todo"},
-            { id: "1", name: "Cereales"},
-            { id: "2", name: "Especias"},
-            { id: "3", name: "Frutas Desecadas"},
-            { id: "4", name: "Frutos Secos"},
-            { id: "5", name: "Harinas"},
-            { id: "6", name: "Herboris."},
-            { id: "7", name: "Legumbres"},
-            { id: "8", name: "Organicos"},
-            { id: "9", name: "Regionales"},
-            { id: "10", name: "Semillas"},
-            { id: "11", name: "Vinos"},
-          ],
-        },
-      ],
-    },
-  ],
-  pages: [
-    { name: "about", title: "!Quienes somos¡" },
-    { name: "contacto", title: "Contactanos" },
-  ],
-};
+const flag = [
+  { id: 1, value: "AR", text: "AR" },
+  { id: 2, value: "ES", text: "ES" },
+  { id: 3, value: "US", text: "US" },
+];
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
-
 export default function Navbar() {
+  const [categories, setCategories] = useState([]);
   const [open, setOpen] = useState(false);
-  const [flags, setFlags] = useState('AR');
-  const {getQuantity} = useContext(CartContext)
+  const [flags, setFlags] = useState("AR");
+  const { getQuantity } = useContext(CartContext);
 
+  const navigation = {
+    categories: [
+      {
+        id: "Tienda",
+        name: "Tienda",
+        sections: [
+          {
+            id: "Categorias",
+            name: "Categorias",
+            items: categories,
+          },
+        ],
+      },
+    ],
+    pages: [
+      { name: "about", title: "!Quienes somos¡" },
+      { name: "contacto", title: "Contactanos" },
+    ],
+  };
 
   const handleFlag = (option) => {
     setFlags(option);
-  }
+  };
+
+  useEffect(() => {
+    getDocs(
+      query(collection(firestoreDb, "categories"), orderBy("name", "asc"))
+    ).then((response) => {
+      const categories = response.docs.map((doc) => {
+        return { id: doc.id, ...doc.data() };
+      });
+      setCategories(categories);
+    });
+  }, []);
 
   return (
     <div className="bg-white">
@@ -144,7 +145,7 @@ export default function Navbar() {
                       <Tab.Panel
                         key={category.name}
                         className="pt-10 pb-8 px-4 space-y-10"
-                      >                        
+                      >
                         {/* Lista de links responsive */}
                         {category.sections.map((section) => (
                           <div key={section.name}>
@@ -162,11 +163,11 @@ export default function Navbar() {
                               {section.items.map((item) => (
                                 <li key={item.name} className="flow-root">
                                   <Link
-                                  to={`/categoria/${item.id}`}
-                                  className="hover:text-gray-800"
-                                  onClick={() => setOpen(false)}
+                                    to={`/categoria/${item.id}`}
+                                    className="hover:text-gray-800"
+                                    onClick={() => setOpen(false)}
                                   >
-                                  {item.name}
+                                    {item.name}
                                   </Link>
                                 </li>
                               ))}
@@ -183,10 +184,11 @@ export default function Navbar() {
               {
                 <div className="border-t border-gray-200 py-6 px-4 space-y-6">
                   {navigation.pages.map((page) => (
-                    <div key={page.name} className="flow-root">                     
-                     <Link to={`/opcion/${page.name}`}
-                            className="-m-2 p-2 block font-medium text-gray-900"
-                            key={page.name}
+                    <div key={page.name} className="flow-root">
+                      <Link
+                        to={`/opcion/${page.name}`}
+                        className="-m-2 p-2 block font-medium text-gray-900"
+                        key={page.name}
                       >
                         {page.title}
                       </Link>
@@ -216,11 +218,11 @@ export default function Navbar() {
 
               <div className="border-t border-gray-200 py-6 px-4">
                 <div href="#" className="-m-2 p-2 flex items-center">
-                    <img
-                      src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${flags}.svg`}
-                      alt=""
-                      className="w-5 h-auto block flex-shrink-0"
-                    />
+                  <img
+                    src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${flags}.svg`}
+                    alt=""
+                    className="w-5 h-auto block flex-shrink-0"
+                  />
                   <Select options={flag} onSelect={handleFlag} />
                 </div>
               </div>
@@ -296,7 +298,7 @@ export default function Navbar() {
 
                                 <div className="relative bg-white">
                                   <div className="max-w-md mx-auto p-8">
-                                    <div className="grid grid-cols-1 ">                                      
+                                    <div className="grid grid-cols-1 ">
                                       <div className="row-start-1 grid grid-cols-1 text-sm">
                                         {category.sections.map((section) => (
                                           <div key={section.name}>
@@ -319,7 +321,6 @@ export default function Navbar() {
                                                   <Link
                                                     to={`/categoria/${item.id}`}
                                                     className="hover:text-blue-800"
-                                                    onClick={() => setOpen(true)}                               
                                                   >
                                                     {item.name}
                                                   </Link>
@@ -340,9 +341,10 @@ export default function Navbar() {
                     ))}
 
                     {navigation.pages.map((page) => (
-                      <Link to={`/opcion/${page.name}`}
-                            className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
-                            key={page.name}
+                      <Link
+                        to={`/opcion/${page.name}`}
+                        className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                        key={page.name}
                       >
                         {page.title}
                       </Link>
@@ -369,9 +371,7 @@ export default function Navbar() {
                 </div>
 
                 <div className="hidden lg:ml-8 lg:flex">
-                  <div
-                    className="text-gray-700 hover:text-gray-800 flex items-center"
-                    >
+                  <div className="text-gray-700 hover:text-gray-800 flex items-center">
                     <img
                       src={`https://purecatamphetamine.github.io/country-flag-icons/3x2/${flags}.svg`}
                       alt=""
@@ -391,8 +391,12 @@ export default function Navbar() {
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
-                  <div className="group -m-2 p-2 items-center "> 
-                   { getQuantity() === 0 ? null : <Link to='/cart' className="grid grid-cols-2 "><CartWidget /></Link>}
+                  <div className="group -m-2 p-2 items-center ">
+                    {getQuantity() === 0 ? null : (
+                      <Link to="/cart" className="grid grid-cols-2 ">
+                        <CartWidget />
+                      </Link>
+                    )}
                   </div>
                 </div>
               </div>

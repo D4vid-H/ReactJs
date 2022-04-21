@@ -1,12 +1,9 @@
 import { createContext, useState } from "react";
 
-
-
-const ToastMessage = ({message, severity}) => {
-
-    if(message === ''){
-        return null;
-    }
+const ToastMessage = ({ message, severity }) => {
+  if (message === "") {
+    return null;
+  }
 
   return (
     <div
@@ -65,27 +62,25 @@ const ToastMessage = ({message, severity}) => {
 
 const NotificationContext = createContext();
 
-export const NotificationProvaider = ({children}) =>{
-    const [message, setMessage] = useState ('');
-    const [severity, setSeverity] = useState('success');
+export const NotificationProvaider = ({ children }) => {
+  const [message, setMessage] = useState("");
+  const [severity, setSeverity] = useState("success");
 
+  const setNotification = (svr, msg) => {
+    setMessage(msg);
+    setSeverity(svr);
 
-    const setNotification = (svr, msg) => {
-        setMessage(msg);
-        setSeverity(svr);
+    setTimeout(() => {
+      setMessage("");
+    }, 2000);
+  };
 
-        setTimeout (() => {
-            setMessage('')
-        }, 2000)
-    }
-
-    return(
-        <NotificationContext.Provider value={{setNotification}}>
-            <ToastMessage message={message} severity={severity}/>
-            {children}
-        </NotificationContext.Provider>
-    );
-}
-
+  return (
+    <NotificationContext.Provider value={{ setNotification }}>
+      <ToastMessage message={message} severity={severity} />
+      {children}
+    </NotificationContext.Provider>
+  );
+};
 
 export default NotificationContext;

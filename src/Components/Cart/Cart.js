@@ -1,48 +1,24 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-import { XIcon } from '@heroicons/react/outline'
+import { Fragment, useState } from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import { XIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom";
-import "./Cart.css"
 import CartContext from "../../Context/CartContext";
 import { useContext } from "react";
-import ItemCart from '../ItemCart/ItemCart';
-
-
-/* const products = [
-  {
-    id: 1,
-    name: 'Throwback Hip Bag',
-    href: '#',
-    color: 'Salmon',
-    price: '$90.00',
-    quantity: 1,
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
-    imageAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
-  },
-  {
-    id: 2,
-    name: 'Medium Stuff Satchel',
-    href: '#',
-    color: 'Blue',
-    price: '$32.00',
-    quantity: 1,
-    imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-02.jpg',
-    imageAlt:
-      'Front of satchel with blue canvas body, black straps and handle, drawstring top, and front zipper pouch.',
-  },
-  // More products...
-] */
+import ItemCart from "../ItemCart/ItemCart";
 
 export default function Cart() {
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(true);
 
-  const {getCart, clear, totalCompra} = useContext(CartContext);
-    
+  const { getCart, clear, totalCompra } = useContext(CartContext);
 
   return (
     <Transition.Root show={open} as={Fragment}>
-      <Dialog as="div" className="fixed inset-0 overflow-hidden" onClose={setOpen}>
+      <Dialog
+        as="div"
+        className="fixed inset-0 overflow-hidden"
+        onClose={setOpen}
+      >
         <div className="absolute inset-0 overflow-hidden">
           <Transition.Child
             as={Fragment}
@@ -71,7 +47,10 @@ export default function Cart() {
                 <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
                   <div className="flex-1 overflow-y-auto py-6 px-4 sm:px-6">
                     <div className="flex items-start justify-between">
-                      <Dialog.Title className="text-lg font-medium text-gray-900"> Shopping cart </Dialog.Title>
+                      <Dialog.Title className="text-lg font-medium text-gray-900">
+                        {" "}
+                        Shopping cart{" "}
+                      </Dialog.Title>
                       <div className="ml-3 flex h-7 items-center">
                         <Link
                           to="/"
@@ -85,14 +64,20 @@ export default function Cart() {
                     </div>
 
                     <div className="mt-8">
-                      <div className="flow-root">                      
-                        <ul role="list" className="-my-6 divide-y divide-gray-200">
-                        {(getCart().length === 0) ? (<li className="flex py-6">¡Sin Productos!</li>):
-                          getCart().map((product) => (
-                            <li key={product.id} className="flex py-6">
-                              <ItemCart product={product} />
-                            </li>
-                          ))}
+                      <div className="flow-root">
+                        <ul
+                          role="list"
+                          className="-my-6 divide-y divide-gray-200"
+                        >
+                          {getCart().length === 0 ? (
+                            <li className="flex py-6">¡Sin Productos!</li>
+                          ) : (
+                            getCart().map((product) => (
+                              <li key={product.id} className="flex py-6">
+                                <ItemCart product={product} />
+                              </li>
+                            ))
+                          )}
                         </ul>
                       </div>
                     </div>
@@ -103,9 +88,11 @@ export default function Cart() {
                       <p>Total</p>
                       <p>{totalCompra()}</p>
                     </div>
-                    <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+                    <p className="mt-0.5 text-sm text-gray-500">
+                      Shipping and taxes calculated at checkout.
+                    </p>
                     <div className="mt-6">
-                      <Link 
+                      <Link
                         to="/"
                         href="#"
                         className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
@@ -116,13 +103,14 @@ export default function Cart() {
                     </div>
                     <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
                       <p>
-                        or{' '}
-                        <Link 
+                        or{" "}
+                        <Link
                           to="/"
                           className="font-medium text-indigo-600 hover:text-indigo-500"
                           onClick={() => setOpen(false)}
                         >
-                          Continuar en la Tienda<span aria-hidden="true"> &rarr;</span>
+                          Continuar en la Tienda
+                          <span aria-hidden="true"> &rarr;</span>
                         </Link>
                       </p>
                     </div>
@@ -134,5 +122,5 @@ export default function Cart() {
         </div>
       </Dialog>
     </Transition.Root>
-  )
+  );
 }

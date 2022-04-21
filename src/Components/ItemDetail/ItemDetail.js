@@ -1,7 +1,6 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
-/* import "./ItemDetail.css"; */
 import CartContext from "../../Context/CartContext";
 import NotificationContext from "../ToastMessegs/ToastMessage";
 
@@ -17,13 +16,11 @@ function ItemDetail({
   precio,
   stock,
 }) {
-  const [quantity, setQuantity] = useState(0);
   const { addItem, isInCart } = useContext(CartContext);
-
   const { setNotification } = useContext(NotificationContext);
 
   const agregarProd = (stock, count) => {
-    const prodObj = { id, nombre, precio, picturUrl };
+    const prodObj = { id, nombre, precio, picturUrl, stock };
     stock - count >= 0 && count > 0 && addItem({ ...prodObj, quantity: count });
     setNotification("success", `Se agregaron ${count} - ${nombre} a la compra`);
   };
@@ -48,6 +45,9 @@ function ItemDetail({
           <div className="w-full md:w-1/2 px-10">
             <div className="mb-10">
               <h1 className="font-bold uppercase text-2xl mb-5">{nombre}</h1>
+              <p className="font-medium capitalize text-sm mb-2">
+                {categoriName}
+              </p>
               <h2 className="font-medium capitalize text-lg mb-2">
                 {descripcion}
               </h2>
@@ -108,21 +108,21 @@ function ItemDetail({
               <div className="inline-block align-bottom mt-1">
                 {isInCart({ id }) ? (
                   <>
-                  <Link
-                    to="/cart"
-                    className="bg-blue-700 opacity-75 hover:opacity-100 text-green-100 hover:text-gray-900 rounded-full px-5 py-2 font-semibold mr-1"
-                  >
-                    Ir al carrito
-                  </Link> 
-                   <Link 
-                  to='/' 
-                  className="bg-blue-700 opacity-75 hover:opacity-100 text-green-100 hover:text-gray-900 rounded-full px-5 py-2 font-semibold ml-1"
-                  >
-                    Seguir comprando
-                  </Link>
+                    <Link
+                      to="/cart"
+                      className="bg-blue-700 opacity-75 hover:opacity-100 text-green-100 hover:text-gray-900 rounded-full px-5 py-2 font-semibold mr-1"
+                    >
+                      Ir al carrito
+                    </Link>
+                    <Link
+                      to="/"
+                      className="bg-blue-700 opacity-75 hover:opacity-100 text-green-100 hover:text-gray-900 rounded-full px-5 py-2 font-semibold ml-1"
+                    >
+                      Seguir comprando
+                    </Link>
                   </>
                 ) : (
-                  <ItemCount stock={9} inicio={1} onAdd={agregarProd} />
+                  <ItemCount stock={stock} inicio={1} onAdd={agregarProd} />
                 )}
               </div>
             </div>
