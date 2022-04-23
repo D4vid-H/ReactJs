@@ -29,7 +29,7 @@ function ItemCart({ product }) {
           <p className="mt-1 text-sm text-gray-500">
             Cantidad: {product.quantity}
           </p>
-          <InputCount product={product} inicio={1} onAdd={addQuantity} />
+          <InputCount product={product} init={1} onAdd={addQuantity} />
         </div>
         <div className="flex flex-1 items-end justify-between text-sm">
           <p className="text-gray-500">

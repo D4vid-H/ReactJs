@@ -3,19 +3,24 @@ import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
 import { useParams } from "react-router-dom";
 import { firestoreDb } from "../../service/firebase";
-import { getDocs, collection, query, where } from "firebase/firestore";
+import { getDocs, collection, query, where, orderBy } from "firebase/firestore";
 
 function ItemListContainer(props) {
   const [products, setProducts] = useState([]);
-  const { categoriaId } = useParams();
+  const { categoryId, nombreSrc } = useParams();
 
   useEffect(() => {
-    const collectionRef = categoriaId
+    const collectionRef = categoryId
       ? query(
           collection(firestoreDb, "products"),
-          where("categoria", "==", categoriaId)
+          where("categoria", "==", categoryId)
         )
-      : collection(firestoreDb, "products");
+      : nombreSrc
+      ? query(
+          collection(firestoreDb, "products"),
+          where("nombre", ">=", nombreSrc)
+        )
+      : query(collection(firestoreDb, "products"), orderBy("nombre", "asc"));
 
     getDocs(collectionRef).then((response) => {
       const products = response.docs.map((doc) => {
@@ -23,7 +28,7 @@ function ItemListContainer(props) {
       });
       setProducts(products);
     });
-  }, [categoriaId]);
+  }, [categoryId, nombreSrc]);
 
   return (
     <div className="itemList">

@@ -21,11 +21,19 @@ export default function App() {
               element={<ItemListConatainer gretens={gretens} />}
             />
             <Route
-              path="/categoria/:categoriaId"
+              path="/categoria/:categoryId"
               element={<ItemListConatainer gretens={gretens} />}
             />
             <Route
               path="/categoria/0"
+              element={<ItemListConatainer gretens={gretens} />}
+            />
+            <Route
+              path="/search/:nombreSrc"
+              element={<ItemListConatainer gretens={gretens} />}
+            />
+            <Route
+              path="/search/"
               element={<ItemListConatainer gretens={gretens} />}
             />
             <Route path="/detail/:id" element={<ItemDetailContainer />} />

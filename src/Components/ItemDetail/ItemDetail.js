@@ -110,13 +110,13 @@ function ItemDetail({
                   <>
                     <Link
                       to="/cart"
-                      className="bg-blue-700 opacity-75 hover:opacity-100 text-green-100 hover:text-gray-900 rounded-full px-5 py-2 font-semibold mr-1"
+                      className="flex mb-2 justify-center bg-blue-700 opacity-75 hover:opacity-100 text-green-100 hover:text-gray-900 rounded-full px-5 py-2 font-semibold mr-1"
                     >
                       Ir al carrito
                     </Link>
                     <Link
                       to="/"
-                      className="bg-blue-700 opacity-75 hover:opacity-100 text-green-100 hover:text-gray-900 rounded-full px-5 py-2 font-semibold ml-1"
+                      className="flex  bg-blue-700 opacity-75 hover:opacity-100 text-green-100 hover:text-gray-900 rounded-full px-5 py-2 font-semibold ml-1"
                     >
                       Seguir comprando
                     </Link>

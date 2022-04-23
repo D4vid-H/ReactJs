@@ -1,7 +1,7 @@
 .itemList {
   display: flex;
   flex-direction: column;
-  background-color: gainsboro;
+  background-color: white;
   justify-content: center;
   align-items: center;
 }

@@ -24,6 +24,7 @@ import Select from "../SelectOptions/Select";
 import CartContext from "../../Context/CartContext";
 import { firestoreDb } from "../../service/firebase";
 import { getDocs, collection, query, orderBy } from "firebase/firestore";
+import Search from "../Search/Search";
 
 const flag = [
   { id: 1, value: "AR", text: "AR" },
@@ -357,7 +358,7 @@ export default function Navbar() {
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   <a
                     href="#"
-                    className="text-sm font-medium text-gray-700 hover:text-gray-800"
+                    className="ml-2 text-sm font-medium text-gray-700 hover:text-gray-800"
                   >
                     Ingreso
                   </a>
@@ -383,10 +384,7 @@ export default function Navbar() {
 
                 {/* Search */}
                 <div className="flex lg:ml-6">
-                  <a href="#" className="p-2 text-gray-400 hover:text-gray-500">
-                    <span className="sr-only">Search</span>
-                    <SearchIcon className="w-6 h-6" aria-hidden="true" />
-                  </a>
+                  <Search />
                 </div>
 
                 {/* Cart */}

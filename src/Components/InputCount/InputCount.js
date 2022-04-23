@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-const InputCount = ({ inicio, onAdd, product }) => {
-  const [count, setCount] = useState(inicio);
+const InputCount = ({ init, onAdd, product }) => {
+  const [count, setCount] = useState(init);
 
   const handleChange = ({ target }) => {
-    if (target.value <= product.stock && target.value >= inicio) {
+    if (target.value <= product.stock && target.value >= init) {
       setCount(target.value);
     }
   };

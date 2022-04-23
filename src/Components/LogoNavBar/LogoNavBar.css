@@ -1,5 +1,5 @@
 .logoNavBarContain {
-  display: flex;
+  display: block;
   width: 65px;
   height: 65px;
   box-sizing: border-box;

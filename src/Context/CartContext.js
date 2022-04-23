@@ -44,12 +44,12 @@ export function CartContextProvaider({ children }) {
     return total;
   };
 
-  const totalCompra = () => {
-    let totalCompra = 0;
+  const getTotalPurchase = () => {
+    let total = 0;
     cart.forEach(product => {
-        totalCompra += (product.quantity * product.precio)
+        total += (product.quantity * product.precio)
     })
-        return totalCompra;
+        return total;
   };
 
   const removeItem = (item) => {
@@ -74,7 +74,7 @@ export function CartContextProvaider({ children }) {
         getCart,
         getQuantity,
         addQuantity,
-        totalCompra,
+        getTotalPurchase,
       }}
     >
       {children}

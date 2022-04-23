@@ -10,7 +10,7 @@ import ItemCart from "../ItemCart/ItemCart";
 export default function Cart() {
   const [open, setOpen] = useState(true);
 
-  const { getCart, clear, totalCompra } = useContext(CartContext);
+  const { getCart, clear, getTotalPurchase } = useContext(CartContext);
 
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -86,7 +86,7 @@ export default function Cart() {
                   <div className="border-t border-gray-200 py-6 px-4 sm:px-6">
                     <div className="flex justify-between text-base font-medium text-gray-900">
                       <p>Total</p>
-                      <p>{totalCompra()}</p>
+                      <p>{getTotalPurchase()}</p>
                     </div>
                     <p className="mt-0.5 text-sm text-gray-500">
                       Shipping and taxes calculated at checkout.
