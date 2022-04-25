@@ -122,7 +122,7 @@ function ItemDetail({
                     </Link>
                   </>
                 ) : (
-                  <ItemCount stock={stock} inicio={1} onAdd={agregarProd} />
+                  <ItemCount stock={stock} init={1} onAdd={agregarProd} />
                 )}
               </div>
             </div>
