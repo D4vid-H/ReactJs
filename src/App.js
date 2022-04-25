@@ -21,15 +21,15 @@ export default function App() {
               element={<ItemListConatainer gretens={gretens} />}
             />
             <Route
-              path="/categoria/:categoryId"
+              path="/category/:categoryId"
               element={<ItemListConatainer gretens={gretens} />}
             />
             <Route
-              path="/categoria/0"
+              path="/category/0"
               element={<ItemListConatainer gretens={gretens} />}
             />
             <Route
-              path="/search/:nombreSrc"
+              path="/search/:nameSrc"
               element={<ItemListConatainer gretens={gretens} />}
             />
             <Route
@@ -37,7 +37,7 @@ export default function App() {
               element={<ItemListConatainer gretens={gretens} />}
             />
             <Route path="/detail/:id" element={<ItemDetailContainer />} />
-            <Route path="/opcion/contacto" element={<Form />} />
+            <Route path="/option/contact" element={<Form />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="*" element={<h1>Not Found 404</h1>} />
           </Routes>

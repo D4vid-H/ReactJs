@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const productImg = require.context("../../img");
 
-function Item({ id, nombre, precio, picturUrl }) {
+function Item({ id, name, price, picturUrl }) {
   return (
     <div className="max-w-sm bg-white rounded-lg shadow-2xl dark:bg-gray-800 dark:border-gray-700">
       <div>
@@ -15,7 +15,7 @@ function Item({ id, nombre, precio, picturUrl }) {
       <div className="px-5 pb-5">
         <div>
           <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white capitalize">
-            {nombre}
+            {name}
           </h5>
         </div>
         <div className="flex items-center mt-2.5 mb-5">
@@ -65,7 +65,7 @@ function Item({ id, nombre, precio, picturUrl }) {
         </div>
         <div className="flex justify-between items-center">
           <span className="text-3xl font-bold text-gray-900 dark:text-white">
-            $ {precio}
+            $ {price}
           </span>
           <Link
             to={`/detail/${id}`}

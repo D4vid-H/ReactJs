@@ -7,20 +7,20 @@ import { getDocs, collection, query, where, orderBy } from "firebase/firestore";
 
 function ItemListContainer(props) {
   const [products, setProducts] = useState([]);
-  const { categoryId, nombreSrc } = useParams();
+  const { categoryId, nameSrc } = useParams();
 
   useEffect(() => {
     const collectionRef = categoryId
       ? query(
           collection(firestoreDb, "products"),
-          where("categoria", "==", categoryId)
+          where("category", "==", categoryId)
         )
-      : nombreSrc
+      : nameSrc
       ? query(
           collection(firestoreDb, "products"),
-          where("nombre", ">=", nombreSrc)
+          where("name", ">=", nameSrc)
         )
-      : query(collection(firestoreDb, "products"), orderBy("nombre", "asc"));
+      : query(collection(firestoreDb, "products"), orderBy("name", "asc"));
 
     getDocs(collectionRef).then((response) => {
       const products = response.docs.map((doc) => {
@@ -28,7 +28,7 @@ function ItemListContainer(props) {
       });
       setProducts(products);
     });
-  }, [categoryId, nombreSrc]);
+  }, [categoryId, nameSrc]);
 
   return (
     <div className="itemList">

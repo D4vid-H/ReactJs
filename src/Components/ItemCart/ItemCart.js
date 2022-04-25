@@ -22,9 +22,9 @@ function ItemCart({ product }) {
         <div>
           <div className="flex justify-between text-base font-medium text-gray-900">
             <h3>
-              <Link to={`/detail/${product.id}`}>{product.nombre}</Link>
+              <Link to={`/detail/${product.id}`}>{product.name}</Link>
             </h3>
-            <p className="ml-4">$ {product.precio}</p>
+            <p className="ml-4">$ {product.price}</p>
           </div>
           <p className="mt-1 text-sm text-gray-500">
             Cantidad: {product.quantity}
@@ -33,7 +33,7 @@ function ItemCart({ product }) {
         </div>
         <div className="flex flex-1 items-end justify-between text-sm">
           <p className="text-gray-500">
-            Sub Total $ {product.quantity * product.precio}
+            Sub Total $ {product.quantity * product.price}
           </p>
 
           <div className="flex">

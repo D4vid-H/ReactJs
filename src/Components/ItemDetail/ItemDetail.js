@@ -8,21 +8,21 @@ const productImg = require.context("../../img");
 
 function ItemDetail({
   id,
-  nombre,
+  name,
   picturUrl,
-  informacion,
-  categoriName,
-  descripcion,
-  precio,
+  information,
+  categoyName,
+  description,
+  price,
   stock,
 }) {
   const { addItem, isInCart } = useContext(CartContext);
   const { setNotification } = useContext(NotificationContext);
 
   const agregarProd = (stock, count) => {
-    const prodObj = { id, nombre, precio, picturUrl, stock };
+    const prodObj = { id, name, price, picturUrl, stock };
     stock - count >= 0 && count > 0 && addItem({ ...prodObj, quantity: count });
-    setNotification("success", `Se agregaron ${count} - ${nombre} a la compra`);
+    setNotification("success", `Se agregaron ${count} - ${name} a la compra`);
   };
 
   return (
@@ -44,14 +44,14 @@ function ItemDetail({
           </div>
           <div className="w-full md:w-1/2 px-10">
             <div className="mb-10">
-              <h1 className="font-bold uppercase text-2xl mb-5">{nombre}</h1>
+              <h1 className="font-bold uppercase text-2xl mb-5">{name}</h1>
               <p className="font-medium capitalize text-sm mb-2">
-                {categoriName}
+                {categoyName}
               </p>
               <h2 className="font-medium capitalize text-lg mb-2">
-                {descripcion}
+                {description}
               </h2>
-              <p className="text-sm">{informacion}</p>
+              <p className="text-sm">{information}</p>
             </div>
             <div className="flex items-center mt-2.5 mb-5">
               <svg
@@ -102,7 +102,7 @@ function ItemDetail({
               <div className="inline-block align-bottom mr-5">
                 <span className="text-2xl leading-none align-baseline">$</span>
                 <span className="font-bold text-5xl leading-none align-baseline">
-                  {precio}
+                  {price}
                 </span>
               </div>
               <div className="inline-block align-bottom mt-1">

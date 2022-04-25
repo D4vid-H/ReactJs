@@ -19,7 +19,7 @@ function ItemDetailContainer(/* { setCart, cart } */) {
   return (
     <>
       {product ? (
-        <ItemDetail {...product} /* setCart={setCart} cart={cart} */ />
+        <ItemDetail {...product} />
       ) : (
         <h2>No Existe el Producto</h2>
       )}

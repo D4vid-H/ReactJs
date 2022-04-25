@@ -58,7 +58,7 @@ export default function Navbar() {
     ],
     pages: [
       { name: "about", title: "!Quienes somos¡" },
-      { name: "contacto", title: "Contactanos" },
+      { name: "contact", title: "Contactanos" },
     ],
   };
 
@@ -164,7 +164,7 @@ export default function Navbar() {
                               {section.items.map((item) => (
                                 <li key={item.name} className="flow-root">
                                   <Link
-                                    to={`/categoria/${item.id}`}
+                                    to={`/category/${item.id}`}
                                     className="hover:text-gray-800"
                                     onClick={() => setOpen(false)}
                                   >
@@ -320,7 +320,7 @@ export default function Navbar() {
                                                   className="flex"
                                                 >
                                                   <Link
-                                                    to={`/categoria/${item.id}`}
+                                                    to={`/category/${item.id}`}
                                                     className="hover:text-blue-800"
                                                   >
                                                     {item.name}
