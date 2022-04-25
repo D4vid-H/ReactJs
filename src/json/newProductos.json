@@ -7,7 +7,7 @@
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 23,
-        "picturUrl": "url",
+        "picturUrl": "./11.webp",
         "stock": "25"
     },
     {
@@ -16,7 +16,7 @@
         "category": "1",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 55,
-        "picturUrl": "url",
+        "picturUrl": "./12.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -27,7 +27,7 @@
         "category": "1",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./13.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -38,7 +38,7 @@
         "category": "1",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 23,
-        "picturUrl": "url",
+        "picturUrl": "./14.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -49,7 +49,9 @@
         "category": "1",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 55,
-        "picturUrl": "url"
+        "categoryName": "name-category",
+        "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
+        "picturUrl": "./15.webp"
     },
     {
         "name": "Avena Instantanea",
@@ -57,7 +59,7 @@
         "category": "1",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./16.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -68,7 +70,7 @@
         "category": "1",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 23,
-        "picturUrl": "url",
+        "picturUrl": "./17.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -79,7 +81,7 @@
         "category": "1",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 55,
-        "picturUrl": "url",
+        "picturUrl": "./18.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -90,7 +92,7 @@
         "category": "1",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./19.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -101,7 +103,7 @@
         "category": "1",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 23,
-        "picturUrl": "url",
+        "picturUrl": "./110.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -112,7 +114,7 @@
         "category": "1",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 55,
-        "picturUrl": "url",
+        "picturUrl": "./111.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -123,7 +125,7 @@
         "category": "1",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./112.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -134,7 +136,7 @@
         "category": "1",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 23,
-        "picturUrl": "url",
+        "picturUrl": "./113.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -145,7 +147,7 @@
         "category": "1",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 55,
-        "picturUrl": "url",
+        "picturUrl": "./114.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -156,7 +158,7 @@
         "category": "1",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./115.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -167,7 +169,7 @@
         "category": "1",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 23,
-        "picturUrl": "url",
+        "picturUrl": "./116.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -178,7 +180,7 @@
         "category": "1",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 55,
-        "picturUrl": "url",
+        "picturUrl": "./117.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -189,7 +191,7 @@
         "category": "2",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./21.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -200,7 +202,7 @@
         "category": "2",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./22.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -211,7 +213,7 @@
         "category": "2",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./23.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -222,7 +224,7 @@
         "category": "2",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./24.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -233,7 +235,7 @@
         "category": "2",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./25.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -244,7 +246,7 @@
         "category": "2",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./26.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -255,7 +257,7 @@
         "category": "2",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./27.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -266,7 +268,7 @@
         "category": "2",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./28.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -277,7 +279,7 @@
         "category": "2",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./29.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -288,7 +290,7 @@
         "category": "2",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./210.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -299,7 +301,7 @@
         "category": "2",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./211.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -310,7 +312,7 @@
         "category": "2",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./212.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -321,7 +323,7 @@
         "category": "2",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./213.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -332,7 +334,7 @@
         "category": "2",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./214.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -343,7 +345,7 @@
         "category": "2",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./215.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -354,7 +356,7 @@
         "category": "2",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./216.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -365,7 +367,7 @@
         "category": "3",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./31.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -376,7 +378,7 @@
         "category": "3",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./32.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -387,7 +389,7 @@
         "category": "3",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./33.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -398,7 +400,7 @@
         "category": "3",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./34.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -409,7 +411,7 @@
         "category": "3",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./35.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -420,7 +422,7 @@
         "category": "3",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./36.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -431,7 +433,7 @@
         "category": "3",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./37.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -442,7 +444,7 @@
         "category": "3",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./38.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -453,7 +455,7 @@
         "category": "3",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./39.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -464,7 +466,7 @@
         "category": "4",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./41.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -475,7 +477,7 @@
         "category": "4",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./42.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -486,7 +488,7 @@
         "category": "4",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./43.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -497,7 +499,7 @@
         "category": "4",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./44.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -508,7 +510,7 @@
         "category": "4",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./45.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -519,7 +521,7 @@
         "category": "4",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./46.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -530,7 +532,7 @@
         "category": "4",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./47.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -541,7 +543,7 @@
         "category": "4",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./48.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -552,7 +554,7 @@
         "category": "4",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./49.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -563,7 +565,7 @@
         "category": "4",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 96,
-        "picturUrl": "url",
+        "picturUrl": "./410.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -574,7 +576,7 @@
         "category": "4",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./411.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -585,7 +587,7 @@
         "category": "4",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 55,
-        "picturUrl": "url",
+        "picturUrl": "./412.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -596,7 +598,7 @@
         "category": "4",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 84,
-        "picturUrl": "url",
+        "picturUrl": "./413.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -607,7 +609,9 @@
         "category": "9",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url"
+        "categoryName": "name-category",
+        "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
+        "picturUrl": "./91.webp"
     },
     {
         "name": "Aceitunas Negras",
@@ -615,7 +619,7 @@
         "category": "9",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./92.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -626,7 +630,7 @@
         "category": "9",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./93.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -637,7 +641,7 @@
         "category": "9",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./94.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -648,7 +652,7 @@
         "category": "10",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./101.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -659,7 +663,7 @@
         "category": "10",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./102.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -670,7 +674,7 @@
         "category": "10",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./103.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -681,7 +685,7 @@
         "category": "10",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./104.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -692,7 +696,7 @@
         "category": "10",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./105.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -703,7 +707,7 @@
         "category": "10",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./106.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -714,7 +718,7 @@
         "category": "10",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./107.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -725,7 +729,7 @@
         "category": "10",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./108.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -736,7 +740,7 @@
         "category": "10",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 74,
-        "picturUrl": "url",
+        "picturUrl": "./109.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -747,7 +751,7 @@
         "category": "10",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 36,
-        "picturUrl": "url",
+        "picturUrl": "./1010.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -758,7 +762,7 @@
         "category": "11",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 688,
-        "picturUrl": "url",
+        "picturUrl": "./1101.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -769,7 +773,7 @@
         "category": "11",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 879,
-        "picturUrl": "url",
+        "picturUrl": "./1102.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -780,7 +784,7 @@
         "category": "11",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 778,
-        "picturUrl": "url",
+        "picturUrl": "./1103.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -791,7 +795,7 @@
         "category": "11",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 956,
-        "picturUrl": "url",
+        "picturUrl": "./1104.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -802,7 +806,7 @@
         "category": "11",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 680,
-        "picturUrl": "url",
+        "picturUrl": "./1105.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
@@ -813,7 +817,7 @@
         "category": "11",
         "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "price": 766,
-        "picturUrl": "url",
+        "picturUrl": "./1106.webp",
         "categoryName": "name-category",
         "information": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, exercitationem?",
         "stock": "25"
