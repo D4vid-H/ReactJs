@@ -1,16 +1,14 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { Fragment, useState } from "react";
+import { Fragment, useState, useContext } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XIcon } from "@heroicons/react/outline";
 import { Link } from "react-router-dom";
 import CartContext from "../../Context/CartContext";
-import { useContext } from "react";
 import ItemCart from "../ItemCart/ItemCart";
+
 
 export default function Cart() {
   const [open, setOpen] = useState(true);
-
-  const { getCart, clear, getTotalPurchase } = useContext(CartContext);
+  const { getCart, getTotalPurchase } = useContext(CartContext);
 
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -93,12 +91,10 @@ export default function Cart() {
                     </p>
                     <div className="mt-6">
                       <Link
-                        to="/"
-                        href="#"
+                        to="/cart/modal"
                         className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-                        onClick={() => clear()}
                       >
-                        Finalizar Comprar
+                        Realizar Compra
                       </Link>
                     </div>
                     <div className="mt-6 flex justify-center text-center text-sm text-gray-500">

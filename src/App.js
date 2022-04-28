@@ -6,6 +6,7 @@ import Form from "./Components/Form/Form";
 import Cart from "./Components/Cart/Cart";
 import { CartContextProvaider } from "./Context/CartContext";
 import { NotificationProvaider } from "./Components/ToastMessegs/ToastMessage";
+import Modal from "./Components/FormUserToBuy/Modal";
 
 export default function App() {
   const gretens = "Listado de Productos";
@@ -39,6 +40,7 @@ export default function App() {
             <Route path="/detail/:id" element={<ItemDetailContainer />} />
             <Route path="/option/contact" element={<Form />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/cart/modal" element={<Modal />} />
             <Route path="*" element={<h1>Not Found 404</h1>} />
           </Routes>
         </BrowserRouter>
