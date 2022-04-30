@@ -98,10 +98,8 @@ function ItemDetail({
                 5.0
               </span>
             </div>
-            <div className="inline-block align-bottom mr-5">              
-              <h2 className="font-medium capitalize text-lg">
-                  Stock: {stock}
-              </h2>
+            <div className="inline-block align-bottom mr-5">
+              <h2 className="font-medium capitalize text-lg">Stock: {stock}</h2>
             </div>
             <div>
               <div className="inline-block align-bottom mr-5">

@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import CartContext from "../../Context/CartContext";
 import ItemCart from "../ItemCart/ItemCart";
 
-
 export default function Cart() {
   const [open, setOpen] = useState(true);
   const { getCart, getTotalPurchase } = useContext(CartContext);

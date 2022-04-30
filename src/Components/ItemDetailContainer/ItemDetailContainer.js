@@ -1,28 +1,36 @@
 import { useEffect, useState } from "react";
-/* import { getItem } from "../AsyncMock/AsyncMock"; */
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
-import { firestoreDb } from "../../service/firebase";
-import { getDoc, doc } from "firebase/firestore";
+import { getProduct } from "../../service/firebase/firestore";
 
-function ItemDetailContainer(/* { setCart, cart } */) {
+function ItemDetailContainer() {
   const [product, setProduct] = useState({});
+  const [loading, setLoading] = useState(false);
+
   const { id } = useParams();
 
   useEffect(() => {
-    getDoc(doc(firestoreDb, "products", id)).then((response) => {
-      const product = { id: response.id, ...response.data() };
-      setProduct(product);
-    });
+    setLoading(true);
+
+    getProduct(id)
+      .then((product) => {
+        setProduct(product);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, [id]);
+
+  if (loading) {
+    return <h1>Cargando...</h1>;
+  }
 
   return (
     <>
-      {product ? (
-        <ItemDetail {...product} />
-      ) : (
-        <h2>No Existe el Producto</h2>
-      )}
+      {product ? <ItemDetail {...product} /> : <h2>No Existe el Producto</h2>}
     </>
   );
 }

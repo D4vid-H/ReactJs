@@ -1,19 +1,3 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
 import { Fragment, useState, useContext, useEffect } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
 import { MenuIcon, SearchIcon, XIcon } from "@heroicons/react/outline";
@@ -22,9 +6,8 @@ import LogoNavBar from "../LogoNavBar/LogoNavBar";
 import { Link } from "react-router-dom";
 import Select from "../SelectOptions/Select";
 import CartContext from "../../Context/CartContext";
-import { firestoreDb } from "../../service/firebase";
-import { getDocs, collection, query, orderBy } from "firebase/firestore";
 import Search from "../Search/Search";
+import { getCategories } from "../../service/firebase/firestore";
 
 const flag = [
   { id: 1, value: "AR", text: "AR" },
@@ -67,14 +50,13 @@ export default function Navbar() {
   };
 
   useEffect(() => {
-    getDocs(
-      query(collection(firestoreDb, "categories"), orderBy("name", "asc"))
-    ).then((response) => {
-      const categories = response.docs.map((doc) => {
-        return { id: doc.id, ...doc.data() };
+    getCategories()
+      .then((categories) => {
+        setCategories(categories);
+      })
+      .catch((error) => {
+        console.log(error);
       });
-      setCategories(categories);
-    });
   }, []);
 
   return (

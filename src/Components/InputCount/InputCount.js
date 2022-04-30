@@ -12,10 +12,10 @@ const InputCount = ({ init, onAdd, product }) => {
   return (
     <div>
       <input type="number" onChange={handleChange} value={count} />
-      <span className="mr-1" onClick={() => onAdd(product, count)}>
+      <span className="mr-1" onClick={() => onAdd(product, count, 'add')}>
         Agregar
       </span>
-      <span className="ml-1" onClick={() => onAdd(product, count, "delete")}>
+      <span className="ml-1" onClick={() => onAdd(product, count, 'delete')}>
         Eliminar
       </span>
     </div>

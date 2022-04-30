@@ -23,18 +23,23 @@ export function CartContextProvaider({ children }) {
 
   const addQuantity = (item, count, string) => {
     if (cart.some((product) => product.id === item.id)) {
-      const cartUpdate = cart.map((product) => {  
-             
-      if (product.id === item.id && string === 'delete') {
-          if(product.quantity - parseInt(count) > 0){
-          product.quantity -= parseInt(count);
+      const UpdateQuantity = cart.map((product) => {
+        if (product.id === item.id) {
+          if (
+            string === "add" &&
+            product.quantity + parseInt(count) <= product.stock
+          ) {
+            product.quantity += parseInt(count);
+          } else if (
+            string === "delete" &&
+            product.quantity - parseInt(count) > 0
+          ) {
+            product.quantity -= parseInt(count);
           }
-        }else if(product.quantity + parseInt(count) <= product.stock){
-        product.quantity += parseInt(count);
         }
         return product;
       });
-      setCart(cartUpdate);
+      setCart(UpdateQuantity);
     }
   };
 
@@ -46,10 +51,10 @@ export function CartContextProvaider({ children }) {
 
   const getTotalPurchase = () => {
     let total = 0;
-    cart.forEach(product => {
-        total += (product.quantity * product.price)
-    })
-        return total;
+    cart.forEach((product) => {
+      total += product.quantity * product.price;
+    });
+    return total;
   };
 
   const removeItem = (item) => {
