@@ -54,9 +54,6 @@ export default function Navbar() {
       .then((categories) => {
         setCategories(categories);
       })
-      .catch((error) => {
-        console.log(error);
-      });
   }, []);
 
   return (

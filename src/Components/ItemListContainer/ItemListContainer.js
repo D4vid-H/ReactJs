@@ -17,9 +17,6 @@ function ItemListContainer(props) {
       .then((products) => {
         setProducts(products);
       })
-      .catch((error) => {
-        console.log(error);
-      })
       .finally(() => {
         setLoading(false);
       });

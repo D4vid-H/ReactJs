@@ -7,11 +7,6 @@ const Form = () => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    console.log(`mostrando el input:${input}`);
-  };
-
-  const handleOnKeyDown = (evt) => {
-    console.log("Prueba");
   };
 
   return (
@@ -22,7 +17,6 @@ const Form = () => {
           type="text"
           className="inputContacto"
           onChange={(evt) => setInput(evt.target.value)}
-          onKeyDown={(evt) => handleOnKeyDown}
         />
       </div>
       <button

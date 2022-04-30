@@ -16,9 +16,6 @@ function ItemDetailContainer() {
       .then((product) => {
         setProduct(product);
       })
-      .catch((error) => {
-        console.log(error);
-      })
       .finally(() => {
         setLoading(false);
       });

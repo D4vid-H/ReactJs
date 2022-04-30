@@ -72,14 +72,12 @@ const Modal = () => {
       })
       .then(({ id }) => {
         batch.commit();
-        console.log(`el id de la orden es: ${id}`);
         setNotification("success", `Se realizo la compra: ${id}`);
       })
       .catch((error) => {
-        console.log(error);
         setNotification(
           "error",
-          `No se pudieron agregar por lata de stock: ${error}`
+          `No se pudieron agregar por falata de stock: ${error}`
         );
       })
       .finally(() => {
