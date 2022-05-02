@@ -1,5 +1,8 @@
-# Masala
+# MASALA
+
 ## _Proyecto: E-commerce_
+
+Demo de una compra en la tienda [Masala](./entregaFinal.gif)
 
 Este es el proyecto que relice en el curso de ReactJs. Se trata de un E-commerce el cual muestra una vidriera de almacen de productos comestibles naturales. Se pueden acceder al detalle de cada producto y realizar una compra si se desea. Al realizar la compra la misma queda almacenada con un ID generado automaticamente (Firebase).
 
