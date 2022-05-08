@@ -29,12 +29,20 @@ export function CartContextProvaider({ children }) {
             string === "add" &&
             product.quantity + parseInt(count) <= product.stock
           ) {
-            product.quantity += parseInt(count);
+            const update = {
+              ...product,
+              quantity: product.quantity += parseInt(count),
+            };
+            return update;
           } else if (
             string === "delete" &&
             product.quantity - parseInt(count) > 0
           ) {
-            product.quantity -= parseInt(count);
+            const update = {
+              ...product,
+              quantity: product.quantity -= parseInt(count),
+            };
+            return update;
           }
         }
         return product;
